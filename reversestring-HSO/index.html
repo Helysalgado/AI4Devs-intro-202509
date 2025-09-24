@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse String — Vanilla JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f7f7f7;
+    }
+    .container {
+      max-width: 400px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 0.6rem;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+    #output {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #333;
+      min-height: 1.5em;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔄 String Reverser</h2>
+    <label for="inputString">Escribe un texto:</label>
+    <input type="text" id="inputString" placeholder="Hello, welcome to AI4Devs">
+    <button id="reverseBtn" class="hidden">Reverse ↻</button>
+    <div id="output" aria-live="polite"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
