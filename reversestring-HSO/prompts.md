@@ -45,3 +45,69 @@ Descripción general del sistema, usuarios y funcionalidades clave.
 ```
 
 4. **Validación:** - “¿Esta estructura refleja correctamente los requisitos de tu sistema? ¿Deseas modificar, agregar o eliminar algo antes de continuar al análisis?”
+
+
+
+-----
+## Prompt generado para construir el Reverse String app
+
+# Reverse String – Vanilla JS Demo
+
+## Descripción general
+Aplicación web educativa en **HTML + JavaScript** que invierte cadenas en tiempo real.  
+Incluye un botón condicional "Reverse ↻" que solo aparece cuando el texto ingresado tiene más de 3 caracteres.
+
+## Usuarios
+- Propietario/instructor
+- Estudiantes (uso puntual en clase o práctica)
+
+## Alcance (MVP)
+- **Entrada de texto** (campo `<input>`).
+- **Salida en tiempo real**: la cadena se invierte mientras el usuario escribe.
+- **Botón “Reverse” condicional**: visible únicamente si `trim(input).length > 3`.
+  - Acción: recalcula la inversión y muestra un feedback visual.
+- **Mensajería/estados**: placeholder inicial; limpia/actualiza resultados al borrar.
+
+## No incluido (por ahora)
+- Persistencia de datos
+- Integraciones externas
+- Autenticación o gestión de usuarios
+- Frameworks (React, Vue, Angular)
+
+## Reglas/Comportamiento
+- La inversión ocurre en cada pulsación de tecla.
+- El botón se oculta cuando `trim(input).length <= 3`.
+- Los espacios y caracteres especiales también se invierten.
+- Ejemplo: `AI4Devs` → `sveD4IA`.
+
+## Criterios de aceptación (BDD-Style)
+- **Dado** un input vacío, **entonces** no se muestra el botón y la salida está vacía.
+- **Dado** el input `"AI4Devs"`, **cuando** escribo el texto, **entonces** la salida muestra `"sveD4IA"` en tiempo real.
+- **Dado** un texto con longitud `> 3`, **entonces** el botón “Reverse” es visible.
+- **Dado** un texto con longitud `≤ 3`, **entonces** el botón “Reverse” es oculto.
+- **Dado** un texto con emoji `"Hola 👋"`, **entonces** la salida es `"👋 aloH"`.
+
+## UX/UI
+- Estilo sencillo, limpio y responsive básico.
+- Estructura:
+  - Título: “String Reverser”
+  - Input de una línea (placeholder: “Hello, welcome to AI4Devs”)
+  - Botón “Reverse ↻” (solo cuando aplique)
+  - Resultado en tipografía clara bajo el botón
+
+## Tech Stack propuesto
+- **Frontend:** HTML5 + JavaScript ES6
+- **Estilos:** CSS inline en `index.html`
+- **Arquitectura:** archivos planos (`index.html` y `script.js`)
+
+## Requerimientos no funcionales
+- Compatible con navegadores modernos (Chrome, Firefox, Edge, Safari)
+- Sin dependencias externas
+- Código claro y didáctico, con comentarios en `script.js`
+
+## Buenas prácticas aplicadas
+- [✓] Simplicidad intencional (KISS)
+- [ ] DDD
+- [ ] TDD
+- [ ] BDD formal (solo criterios de aceptación ligeros)
+- [✓] Accesibilidad básica (`label` + `aria-live="polite"`)
